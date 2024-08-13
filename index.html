@@ -4,12 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library | The Odin Project</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        
+        <div class="books-container">
+            <div class="book">
+                <h2 class="book-title">Book Title: Fantoms Journey</h2>
+                <h3 class="book-author">Book Author: Fantom</h3>
+                <h4 class="book-pages">Book Pages: 360</h4>
+                <h6 class="read-status">Read Status: Has Been Read</h6>
+
+                <button type="button" class="delete">X</button>
+            </div>
+        </div>
+
+
+        <button type="button" class="new-book-button">New Book</button>
+
+        <div class="new-book-input">
+            <form>
+                <label for="book-title">Book Title:</label>
+                <input type="text" name="book title" id="book-title" required>
+
+                <label for="book-author">Book Author:</label>
+                <input type="text" name="book author" id="book-author" required>
+
+                <label for="book-pages">Book Pages:</label>
+                <input type="number" name="book pages" id="book-pages">
+
+                <label for="book-read-status">Book has been read:</label>
+                <select name="book read status" id="book-read-status">
+                    <option value="true">True</option>
+                    <option value="false" selected>False</option>
+                </select>
+
+                <button id="submit">Add Book</button>
+            </form>
+        </div>
     </div>
 
-    <script src="main.js"></script>
+    <script type="module" src="scripts/makeBook.js"></script>
+    <script type="module" src="scripts/displayBooks.js"></script>
 </body>
 </html>
