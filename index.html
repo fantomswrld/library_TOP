@@ -8,22 +8,18 @@
 </head>
 <body>
     <div class="container">
-        <div class="books-container">
-            <div class="book">
-                <h2 class="book-title">Book Title: Fantoms Journey</h2>
-                <h3 class="book-author">Book Author: Fantom</h3>
-                <h4 class="book-pages">Book Pages: 360</h4>
-                <h6 class="read-status">Read Status: Has Been Read</h6>
+        <div class="visible-content">
+            <button type="button" class="new-book-button">New Book</button>
 
-                <button type="button" class="delete">X</button>
+            <div class="books-container">
+                
             </div>
         </div>
 
-
-        <button type="button" class="new-book-button">New Book</button>
-
         <div class="new-book-input">
             <form>
+                <button type="button" id="close">X</button>
+
                 <label for="book-title">Book Title:</label>
                 <input type="text" name="book title" id="book-title" required>
 
