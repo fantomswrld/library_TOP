@@ -19,19 +19,23 @@ let bookReadStatus = false
 
 export const myLibrary = []
 
-function Book(title, author, pages, readStatus) {
-    this.title = title
-    this.author = author
-    this.pages = pages
-    this.readStatus = readStatus
+class Book {
+    title
+    author
+    pages
+    readStatus
 
-    Book.prototype.info = () => {
-        if(this.readStatus === true) {
-            return `${title} by ${author}, ${pages} pages, has been read`
-        } else {
-            return `${title} by ${author}, ${pages} pages, not read yet`
-        }
+    constructor(title, author, pages, readStatus) {
+        this.title = title
+        this.author = author
+        this.pages = pages
+        this.readStatus = readStatus
     }
+
+    get title() { return title }
+    get author() { return author }
+    get pages() { return pages }
+    get readStatus() { return readStatus }
 }
 
 function addBookToLibrary(title, author, pages, readStatus) {
